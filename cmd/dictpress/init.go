@@ -176,7 +176,7 @@ func initHTTPServer(app *App, ko *koanf.Koanf) *echo.Echo {
 	a.PUT("/api/entries/:id", handleUpdateEntry)
 	a.DELETE("/api/entries/:id", handleDeleteEntry)
 	a.DELETE("/api/entries/:fromID/relations/:relID", handleDeleteRelation)
-	a.POST("/api/entries/:fromID/relations/:toID", handleAddRelation)
+	a.POST("/api/entries/:fromID/relations/:relID", handleAddRelation)
 	a.PUT("/api/entries/:id/relations/weights", handleReorderRelations)
 	a.PUT("/api/entries/:id/relations/:relID", handleUpdateRelation)
 	a.PUT("/api/entries/:id/submission", handleApproveSubmission)

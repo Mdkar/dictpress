@@ -248,7 +248,7 @@ func handleAddRelation(c echo.Context) error {
 	var (
 		app       = c.Get("app").(*App)
 		fromID, _ = strconv.Atoi(c.Param("fromID"))
-		toID, _   = strconv.Atoi(c.Param("toID"))
+		toID, _   = strconv.Atoi(c.Param("relID"))
 	)
 
 	if fromID < 1 || toID < 1 {
