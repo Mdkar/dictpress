@@ -22,7 +22,7 @@ enable_pages = true
 # Enable API endpoints for accepting public user submissions and corrections.
 # All user submissions are queued for the admin to review and only get published
 # on approval.
-enable_submissions = false
+enable_submissions = true
 
 
 [results]
@@ -70,10 +70,23 @@ verb = "Verb"
 adv = "Adverb"
 conj = "Conjugation"
 
-[lang.italian]
-tokenzier = "italian"
+# [lang.italian]
+# tokenzier = "italian"
+# tokenizer_type = "postgres"
+
+# [lang.italian.types]
+# sost = "Sostantivo"       # Noun
+# verb = "Verbo"            # Verb
+
+[lang.cmu]
+name = "CMU"
+tokenizer = "english"
 tokenizer_type = "postgres"
 
-[lang.italian.types]
-sost = "Sostantivo"       # Noun
-verb = "Verbo"            # Verb
+[lang.cmu.types]
+noun = "Noun"
+adj = "Adjective"
+verb = "Verb"
+adv = "Adverb"
+conj = "Conjugation"
+phrase = "Phrase"
